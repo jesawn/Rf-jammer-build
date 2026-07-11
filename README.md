@@ -1,81 +1,61 @@
 # 📡 RF Jammer для Flipper Zero / RF Jammer for Flipper Zero
 
-**Русский / Russian**
+**Готовый `.fap` плагин для глушения сигналов. Собрано из исходников RocketGod специально для прошивки Momentum.**
 
-Готовый `.fap` плагин для глушения сигналов на Flipper Zero. Собрано из исходников RocketGod специально для прошивки Momentum.
-
-**Для кого:** Для тех, кто устал искать готовые файлы и хочет сразу запустить без танцев с бубном.
+**Ready-to-use `.fap` plugin for signal jamming. Compiled from RocketGod's source code specifically for Momentum firmware.**
 
 ---
 
-### 🚀 Как установить / How to install:
+## 🚀 Установка и использование / Installation & Usage
 
-1. Скачай файл `jammer_app.fap` (он лежит в релизах).
-2. Кидаешь его в папку `apps` на SD-карте Flipper Zero.
-3. Вставляешь карту обратно.
-4. Запускаешь через меню приложений на флиппере.
-5. Радуешься, что всё работает.
+1. Скачай файл `jammer_app.fap` из раздела **Releases**.
+2. Скопируй его в папку `apps` на SD-карте Flipper Zero.
+3. Запусти через меню приложений.
+4. Выбери нужную частоту и режим.
 
----
-
-### 🔧 Совместимость / Compatibility:
-
-- ✅ **Momentum** (release-канал / release channel) — тестировал, работает.
-- ✅ **Official** — тоже должно взлететь.
-- ✅ **Unleashed** — по идее тоже ок.
+1. Download `jammer_app.fap` from the **Releases** section.
+2. Copy it to the `apps` folder on your Flipper Zero SD card.
+3. Launch from the apps menu.
+4. Select the desired frequency and mode.
 
 ---
 
-### ⚠️ Важное предупреждение / Important warning:
+## 📡 Как это работает / How it works
 
-Это сделано **для образовательных целей**. В реальной жизни глушилки запрещены законом, и за их использование могут быть проблемы. Так что не шали.
+**(Русский)**
+Плагин генерирует мощный сигнал на выбранной частоте, который "забивает" эфир и мешает приёмникам распознавать реальные данные. Подходит для тестирования устройств на частотах 433 МГц и 868 МГц.
 
-*This is for **educational purposes only**. In real life, jammers are illegal and can get you in trouble. Don't mess around.*
-
----
-
-### 👨‍💻 Откуда ноги растут / Original source:
-
-Исходный код взял у **RocketGod-git/flipper-zero-rf-jammer**. Я просто собрал готовый `.fap`, чтобы не мучиться.
-
-*Source code by **RocketGod-git/flipper-zero-rf-jammer**. I just compiled the `.fap` so you don't have to.*
+**(English)**
+The plugin generates a powerful signal on the selected frequency, "jamming" the airwaves and preventing receivers from recognizing real data. Suitable for testing devices at 433 MHz and 868 MHz frequencies.
 
 ---
 
-**English / Английский**
+## ⚙️ Режимы работы / Operation Modes
 
-Ready-to-use `.fap` plugin for Flipper Zero. Compiled from RocketGod's source code specifically for Momentum firmware.
-
-**For:** Those who are tired of searching for ready-made files and want to just download and run.
-
----
-
-### 📥 Download:
-
-Grab the `jammer_app.fap` file from the Releases section.
+| Режим / Mode | Описание / Description (RU) | Description (EN) |
+| :--- | :--- | :--- |
+| **OOK 650 kHz** | Передаёт непрерывный сигнал `0xFF`, который полностью "забивает" эфир. | Transmits a continuous `0xFF` signal, completely jamming the airwaves. |
+| **2FSK 2.38 kHz** | Использует узкую полосу и точную модуляцию для запутывания демодуляторов. | Uses narrow bandwidth and precise modulation to confuse demodulators. |
+| **MSK 99.97 Kb/s** | Генерирует случайный шум, имитирующий высокоскоростную цифровую связь. | Generates random noise that simulates high-speed digital communication. |
+| **Шум / Noise** | Создаёт естественные помехи, которые сложно отфильтровать. | Creates natural interference that is hard to filter out. |
 
 ---
 
-### 📂 Installation:
+## ⚠️ Важное предупреждение / Important Warning
 
-1. Copy `jammer_app.fap` to the `apps` folder on your Flipper Zero SD card.
-2. Insert the card back.
-3. Launch from the apps menu on your Flipper.
-4. Enjoy.
+**Только для образовательных целей!** В реальной жизни использование глушилок запрещено законом и может привести к серьёзным последствиям.
 
----
-
-### 🛠️ Compatibility:
-
-- ✅ **Momentum** (release channel) — tested, works.
-- ✅ **Official** — should work too.
-- ✅ **Unleashed** — probably works as well.
+**For educational purposes only!** In real life, using jammers is illegal and can lead to serious consequences.
 
 ---
 
-### ⚠️ Disclaimer:
+## 👨‍💻 Исходный код и автор / Source Code & Original Author
 
-For educational use only. Using jammers in real life is illegal in most countries.
+Оригинальный проект и исходный код: **RocketGod-git/flipper-zero-rf-jammer**.  
+Этот репозиторий содержит готовую сборку (`.fap`) для тех, кто не хочет компилировать самостоятельно.
+
+Original project and source code: **RocketGod-git/flipper-zero-rf-jammer**.  
+This repository contains a pre-built (`.fap`) version for those who don't want to compile it themselves.
 
 ---
 
